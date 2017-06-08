@@ -12,6 +12,8 @@
 		6B12CDC81EE9AE240017B360 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B12CDC71EE9AE240017B360 /* Assets.xcassets */; };
 		6B12CDCB1EE9AE240017B360 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B12CDC91EE9AE240017B360 /* LaunchScreen.storyboard */; };
 		6B12CDD31EE9B09D0017B360 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B12CDD21EE9B09D0017B360 /* Survey.swift */; };
+		6B12CDD91EE9B3B10017B360 /* SurveyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B12CDD81EE9B3B10017B360 /* SurveyController.swift */; };
+		6B12CDDC1EE9B4370017B360 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B12CDDB1EE9B4370017B360 /* NetworkController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		6B12CDCA1EE9AE240017B360 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B12CDCC1EE9AE240017B360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B12CDD21EE9B09D0017B360 /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		6B12CDD81EE9B3B10017B360 /* SurveyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyController.swift; sourceTree = "<group>"; };
+		6B12CDDB1EE9B4370017B360 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				6B12CDC01EE9AE230017B360 /* AppDelegate.swift */,
+				6B12CDD71EE9B3A20017B360 /* ModelControllers */,
 				6B12CDD41EE9B0A10017B360 /* Models */,
 				6B12CDD61EE9B0B40017B360 /* ViewControllers */,
+				6B12CDDA1EE9B4200017B360 /* Networking */,
 				6B12CDD51EE9B0AD0017B360 /* Resources */,
 			);
 			path = Survey2;
@@ -86,6 +92,22 @@
 				6B12CDC41EE9AE240017B360 /* Main.storyboard */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6B12CDD71EE9B3A20017B360 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6B12CDD81EE9B3B10017B360 /* SurveyController.swift */,
+			);
+			name = ModelControllers;
+			sourceTree = "<group>";
+		};
+		6B12CDDA1EE9B4200017B360 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				6B12CDDB1EE9B4370017B360 /* NetworkController.swift */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +183,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B12CDDC1EE9B4370017B360 /* NetworkController.swift in Sources */,
+				6B12CDD91EE9B3B10017B360 /* SurveyController.swift in Sources */,
 				6B12CDC11EE9AE230017B360 /* AppDelegate.swift in Sources */,
 				6B12CDD31EE9B09D0017B360 /* Survey.swift in Sources */,
 			);
