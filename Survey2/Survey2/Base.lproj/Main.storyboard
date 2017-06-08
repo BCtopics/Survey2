@@ -126,7 +126,6 @@
                     <connections>
                         <outlet property="nameTextField" destination="PPW-DN-nf1" id="MIs-4B-CfM"/>
                         <outlet property="responseTextField" destination="XXU-KW-89u" id="spP-Fx-II5"/>
-                        <outlet property="submitResponseButtonTapped" destination="wh8-d4-ln0" id="usI-QK-X5I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ga6-pn-F8q" userLabel="First Responder" sceneMemberID="firstResponder"/>

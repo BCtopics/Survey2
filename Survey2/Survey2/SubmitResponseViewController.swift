@@ -12,20 +12,8 @@ class SubmitResponseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
     //MARK: - IBOutlets
     
     @IBOutlet weak var nameTextField: UITextField!
@@ -35,7 +23,17 @@ class SubmitResponseViewController: UIViewController {
     
     @IBAction func submitButtonTapped(_ sender: Any) {
         
+        guard let name = nameTextField.text, let response = responseTextField.text else { return }
         
+        SurveyController.putSurveyWith(name: name, response: response, identifier: UUID().uuidString) { (success) in
+            
+            if success {
+                NSLog("Successfully saved survey")
+            } else {
+                NSLog("Error saving survey")
+            }
+            
+        }
         
     }
     

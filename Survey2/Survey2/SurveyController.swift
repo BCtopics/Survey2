@@ -10,9 +10,17 @@ import Foundation
 
 class SurveyController {
     
+    static let surveysWereUpdatedNotification = Notification.Name("surveysWereUpdated")
+    
     static let baseURL = URL(string: "https://survey-95ee2.firebaseio.com/")
     
-    static var surveys: [Survey] = []
+    static var surveys: [Survey] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(name: surveysWereUpdatedNotification, object: self)
+            }
+        }
+    }
 
     //MARK: - Put Request
     

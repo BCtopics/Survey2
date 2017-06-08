@@ -19,18 +19,18 @@ class SurveyListViewController: UIViewController, UITableViewDataSource, UITable
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.refresh), name: SurveyController.surveysWereUpdatedNotification, object: nil)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
+    func refresh() {
+        self.tableView.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        SurveyController.fetchSurveys()
+    }
 
     //MARK: - UITableViewDataSource Functions
     
@@ -39,7 +39,7 @@ class SurveyListViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "responseCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reponseCell", for: indexPath)
         
         let survey = SurveyController.surveys[indexPath.row]
         
