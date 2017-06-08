@@ -44,6 +44,33 @@ class SurveyController {
         }
     }
     
+    //MARK: - Fetch Requests
+    
+    static func fetchSurveys() {
+        
+        guard let requestURL = baseURL?.appendingPathExtension("json") else { return }
+        
+        var request = URLRequest(url: requestURL)
+        
+        request.httpMethod = "GET"
+        
+        let dataTask = URLSession.shared.dataTask(with: request) { (data, _, error) in
+            
+            if let error = error { NSLog("Error fetching data \(error.localizedDescription)"); return }
+            
+            guard let data = data, let responseDataString = String(data: data, encoding: .utf8) else { NSLog("No data retuned from data task"); return }
+            
+            guard let jsonDictionary = (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)) as? [String: [String: Any]] else { NSLog("JSONSerialiation Failed"); return}
+            
+            let surveys = jsonDictionary.flatMap { Survey(dictionary: $0.value, identifier: $0.key) }
+            
+            self.surveys = surveys
+        }
+        
+        dataTask.resume()
+
+    }
+
 // End
 }
 // End
