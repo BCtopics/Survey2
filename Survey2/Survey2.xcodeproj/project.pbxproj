@@ -14,6 +14,8 @@
 		6B12CDD31EE9B09D0017B360 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B12CDD21EE9B09D0017B360 /* Survey.swift */; };
 		6B12CDD91EE9B3B10017B360 /* SurveyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B12CDD81EE9B3B10017B360 /* SurveyController.swift */; };
 		6B12CDDC1EE9B4370017B360 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B12CDDB1EE9B4370017B360 /* NetworkController.swift */; };
+		6B12CDDF1EE9C08A0017B360 /* SubmitResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B12CDDE1EE9C08A0017B360 /* SubmitResponseViewController.swift */; };
+		6B12CDE11EE9C0A90017B360 /* SurveyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B12CDE01EE9C0A90017B360 /* SurveyListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		6B12CDD21EE9B09D0017B360 /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		6B12CDD81EE9B3B10017B360 /* SurveyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyController.swift; sourceTree = "<group>"; };
 		6B12CDDB1EE9B4370017B360 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		6B12CDDE1EE9C08A0017B360 /* SubmitResponseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitResponseViewController.swift; sourceTree = "<group>"; };
+		6B12CDE01EE9C0A90017B360 /* SurveyListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				6B12CDC41EE9AE240017B360 /* Main.storyboard */,
+				6B12CDDE1EE9C08A0017B360 /* SubmitResponseViewController.swift */,
+				6B12CDE01EE9C0A90017B360 /* SurveyListViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -185,6 +191,8 @@
 			files = (
 				6B12CDDC1EE9B4370017B360 /* NetworkController.swift in Sources */,
 				6B12CDD91EE9B3B10017B360 /* SurveyController.swift in Sources */,
+				6B12CDE11EE9C0A90017B360 /* SurveyListViewController.swift in Sources */,
+				6B12CDDF1EE9C08A0017B360 /* SubmitResponseViewController.swift in Sources */,
 				6B12CDC11EE9AE230017B360 /* AppDelegate.swift in Sources */,
 				6B12CDD31EE9B09D0017B360 /* Survey.swift in Sources */,
 			);

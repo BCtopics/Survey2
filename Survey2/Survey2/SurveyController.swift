@@ -13,9 +13,6 @@ class SurveyController {
     static let baseURL = URL(string: "https://survey-95ee2.firebaseio.com/")
     
     static var surveys: [Survey] = []
-    
-    //MARK: - Get Request
-    
 
     //MARK: - Put Request
     
